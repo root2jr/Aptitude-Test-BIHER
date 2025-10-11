@@ -1,0 +1,281 @@
+/* --- Google Fonts (Optional but recommended) --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* --- CSS Variables for Bharat University Theme --- */
+:root {
+  --primary-bg: #f5f5f5;
+  --container-bg: #ffffff;
+  --text-primary: #333333;
+  --text-secondary: #5d5d5d;
+  --accent-gradient: linear-gradient(90deg, #8C1C13 0%, #FF671F 100%);
+  --accent-primary: #8C1C13; /* University Maroon */
+  --accent-secondary: #FF671F; /* University Saffron/Orange */
+  --border-light: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* --- Base Styles --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+/* --- Main Container --- */
+.container {
+  background-color: var(--container-bg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px -5px var(--shadow-color), 0 8px 10px -6px var(--shadow-color);
+  width: 100%;
+  max-width: 750px;
+  border-top: 5px solid;
+  border-image: var(--accent-gradient) 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 95vh;
+  position: relative;
+}
+
+/* --- Login Component Styles --- */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.login-container img {
+  width: 100%;
+  max-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.login-container h1 {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  margin-bottom: 2rem;
+}
+
+.input-field {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent-secondary);
+}
+
+/* --- Timer Display --- */
+.timer {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background-color: #f0f0f0;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  z-index: 10;
+}
+
+.timer-icon {
+  width: 16px;
+  height: 16px;
+  stroke-width: 2.5;
+  color: var(--text-secondary);
+}
+
+.timer span {
+  font-weight: 700;
+  color: var(--accent-primary);
+}
+
+/* --- Header & Progress Bar --- */
+.quiz-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding-top: 1.5rem;
+}
+
+.quiz-header img {
+  width: 100%;
+  max-width: 160px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.quiz-header h1 {
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--border-light);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.progress-bar-inner {
+  height: 100%;
+  background: var(--accent-gradient);
+  border-radius: 5px;
+  transition: width 0.4s ease-in-out;
+}
+
+/* --- Question & Options Block --- */
+.question-block {
+  flex-grow: 1; /* Allow this block to take up available vertical space */
+  overflow-y: auto; /* Add scrollbar ONLY to this section if needed */
+  padding-right: 1rem; /* Space for the scrollbar */
+  margin-right: -1rem; /* Offset padding to keep content centered */
+}
+
+/* Custom Scrollbar */
+.question-block::-webkit-scrollbar {
+  width: 8px;
+}
+.question-block::-webkit-scrollbar-track {
+  background: transparent;
+}
+.question-block::-webkit-scrollbar-thumb {
+  background-color: var(--border-light);
+  border-radius: 10px;
+  border: 3px solid transparent;
+}
+
+
+.question-text {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  word-break: break-word;
+}
+
+.options-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.option-btn {
+  padding: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  text-align: left;
+  background-color: transparent;
+  border: 2px solid var(--border-light);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.option-btn.selected {
+  background-color: #fcebe3;
+  border-color: var(--accent-primary);
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+/* --- Navigation Buttons --- */
+.next-btn,
+.restart-btn {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  font-weight: 600;
+  color: white;
+  background-image: var(--accent-gradient);
+  background-size: 200%;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.next-btn:disabled {
+  background-image: none;
+  background-color: var(--border-light);
+  cursor: not-allowed;
+}
+
+
+/* --- Results Screen --- */
+.results-container h2, .score-text {
+  text-align: center;
+}
+.results-container h2 { font-size: clamp(1.6rem, 6vw, 2.5rem); }
+.score-text { font-size: clamp(1.1rem, 4vw, 1.4rem); }
+.score-text span { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+
+/* --- Media Queries for Responsiveness --- */
+@media (min-width: 600px) {
+  .options-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .question-text {
+    text-align: left;
+  }
+}
+
+/* --- Aggressive styling for short viewports --- */
+@media (max-height: 700px) {
+  .container { padding: 1rem; max-height: 98vh; }
+  .quiz-header { padding-top: 1rem; }
+  .quiz-header img { max-width: 120px; margin-bottom: 0.5rem; }
+  .quiz-header h1 { font-size: clamp(1.2rem, 4vw, 1.5rem); margin-bottom: 0.75rem; }
+  .progress-bar { margin-bottom: 1rem; }
+  .question-text { font-size: clamp(0.9rem, 2.5vw, 1rem); margin-bottom: 1rem; line-height: 1.4; }
+  .option-btn { padding: 0.75rem; font-size: 0.9rem; }
+  .options-container { gap: 0.5rem; }
+  .next-btn, .restart-btn { margin-top: 1rem; padding: 0.75rem; }
+  .timer { top: 0.75rem; right: 0.75rem; padding: 0.3rem 0.6rem; font-size: 0.9rem; }
+}
+
+@media (max-width: 400px) {
+  .quiz-header { padding-top: 2rem; }
+}
+
+/* --- Hover Effects --- */
+@media (hover: hover) {
+  .option-btn:hover {
+    border-color: var(--accent-secondary);
+    transform: translateY(-2px);
+  }
+  .next-btn:not(:disabled):hover,
+  .restart-btn:hover {
+    background-position: right center;
+    transform: translateY(-3px);
+  }
+}
+
