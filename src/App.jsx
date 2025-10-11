@@ -95,13 +95,12 @@ function App() {
       });
   }, [isLoggedIn, isBlocked]);
 
-  // --- Anti-Cheating: Tab Switch Detection (Backend Integrated) ---
+
   useEffect(() => {
     if (!isLoggedIn || isLoading || showResults || isBlocked) return;
     
     const handleVisibilityChange = () => {
       if (document.hidden) {
-        // Report cheat to backend
         const id = localStorage.getItem('studentId');
         if (id) {
           fetch(`${API_URL}/cheat`, {
