@@ -3,7 +3,7 @@ import './App.css';
 import logo from '/images/logo.png';
 
 // The URL of your FastAPI backend.
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://aptitude-test-biher.onrender.com";
 const QUESTION_TIME_LIMIT = 60; // 60 seconds per question
 
 function App() {

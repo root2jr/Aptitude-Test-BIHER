@@ -16,8 +16,8 @@ load_dotenv()
 # This is crucial for allowing your React frontend (running on a different port)
 # to communicate with this backend.
 origins = [
-    "http://localhost:3000", # Default for Create React App
-    "http://localhost:5173", # Default for Vite
+    "http://localhost:5173",
+    "https://aptitude-test-biher.netlify.app"# Default for Vite
 ]
 
 app.add_middleware(
