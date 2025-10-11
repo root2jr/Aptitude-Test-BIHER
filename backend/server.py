@@ -17,7 +17,8 @@ load_dotenv()
 # to communicate with this backend.
 origins = [
     "http://localhost:5173",
-    "https://aptitude-test-biher.netlify.app"# Default for Vite
+    "https://aptitude-test-biher.netlify.app",
+    "https://lp732l7b-5173.inc1.devtunnels.ms/"
 ]
 
 app.add_middleware(

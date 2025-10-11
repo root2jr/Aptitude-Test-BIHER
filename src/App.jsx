@@ -112,8 +112,7 @@ function App() {
         }
         
         // Block locally
-        localStorage.setItem('testBlocked', 'true');
-        setIsBlocked(true);
+        
       }
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);

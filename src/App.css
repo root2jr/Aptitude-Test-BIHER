@@ -264,6 +264,9 @@ body {
 
 @media (max-width: 400px) {
   .quiz-header { padding-top: 2rem; }
+  .container{
+    color: black;
+  }
 }
 
 /* --- Hover Effects --- */
@@ -278,4 +281,7 @@ body {
     transform: translateY(-3px);
   }
 }
-
+.login-container input{
+  background-color: white;
+  color:black;
+}
