@@ -86,7 +86,7 @@ async def submit_answers(user_answers: UserAnswers):
     submitted = user_answers.answers
     questions_db = (await questions.find_one({"test": user_answers.test}))["questions"]
     correct_answers_db = {q["id"]: q["answer"] for q in questions_db}
-
+    
     # Iterate through the submitted answers and compare with the correct ones
     for question_id, user_answer in submitted.items():
         # Check if the submitted answer for the given question ID is correct
@@ -143,17 +143,26 @@ class newAdd(BaseModel):
   test: str
 
 @app.post("/api/add-questions")
-async def handle_add_questions(data:newAdd):
-   unique_id = str(uuid.uuid4())
-   new_questions = [q.dict() for q in data.Question]
-   for que in new_questions:
-      que["id"] = unique_id
-      response =  await questions.update_one(
-    {"test": que["test"]},
-    {"$addToSet": {"questions": que}},upsert=True
-)
-  
-   return {"Message": "Questions Added Successfully"}
+async def handle_add_questions(data: newAdd):
+    new_questions = [q.dict() for q in data.Question]
+
+    # Fetch the test document once
+    test_doc = await questions.find_one({"test": data.test})
+
+    # Get current count of existing questions
+    base_count = len(test_doc["questions"]) if test_doc and "questions" in test_doc else 0
+
+    # Enumerate over new questions, continuing from base_count + 1
+    for i, que in enumerate(new_questions, start=base_count + 1):
+        que["id"] = i
+
+        await questions.update_one(
+            {"test": que["test"]},
+            {"$addToSet": {"questions": que}},
+            upsert=True
+        )
+
+    return {"Message": "Questions Added Successfully", "Added": len(new_questions)}
 
 
 @app.post("/handle-delete")
