@@ -2,17 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import logo from '/images/logo.png';
 
-// The URL of your FastAPI backend.
-const API_URL = "https://aptitude-test-biher.onrender.com";
-const QUESTION_TIME_LIMIT = 60; // 60 seconds per question
+const API_URL = "http://127.0.0.1:8000";
+const QUESTION_TIME_LIMIT = 60;
 
 function App() {
-  // --- State Variables ---
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [studentName, setStudentName] = useState('');
   const [studentId, setStudentId] = useState('');
-  const [isRegistering, setIsRegistering] = useState(false); // For login button loading state
-
+  const [isRegistering, setIsRegistering] = useState(false);
+  const [department, setDepartment] = useState('');
+  const [Test, setTest] = useState('');
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
@@ -24,7 +23,6 @@ function App() {
 
   const timerRef = useRef(null);
 
-  // --- Login and Anti-Cheating Logic ---
   useEffect(() => {
     const loggedInStatus = localStorage.getItem('isLoggedIn');
     const blockedStatus = localStorage.getItem('testBlocked');
@@ -43,20 +41,34 @@ function App() {
       alert("Please enter both your name and student ID.");
       return;
     }
-    
+    if ((studentId.length < 9) || (studentId[0] != 'U')) {
+      alert("Enter a valid Student ID");
+      return;
+    }
+
     setIsRegistering(true);
 
     try {
-      
+
       const response = await fetch(`${API_URL}/users`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           name: studentName,
           userid: studentId,
-          didCheat: "NO"
+          didCheat: "NO",
+          department: department,
+          test: Test
         }),
       });
+      const responseData = await response.json();
+      const stringdfy = JSON.stringify(responseData);
+      if (responseData && responseData.message === "User Already Attended the Test") {
+        alert("User Already Attended the Test");
+        setStudentId("");
+        setStudentName("");
+        return;
+      }
 
       if (!response.ok) {
         throw new Error('Failed to register user on the server.');
@@ -66,6 +78,7 @@ function App() {
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('studentName', studentName);
       localStorage.setItem('studentId', studentId);
+      localStorage.setItem('test', Test);
       setIsLoggedIn(true);
 
     } catch (error) {
@@ -83,7 +96,11 @@ function App() {
       return;
     }
     setIsLoading(true);
-    fetch(`${API_URL}/api/questions`)
+    fetch(`${API_URL}/api/questions`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ test: localStorage.getItem("test") }),
+    })
       .then(res => res.json())
       .then(data => {
         setQuestions(data);
@@ -98,7 +115,6 @@ function App() {
 
   useEffect(() => {
     if (!isLoggedIn || isLoading || showResults || isBlocked) return;
-    
     const handleVisibilityChange = () => {
       if (document.hidden) {
         const id = localStorage.getItem('studentId');
@@ -109,16 +125,15 @@ function App() {
             body: JSON.stringify({ userid: id }),
           }).catch(err => console.error("Could not report cheat to server:", err));
         }
-        
-        // Block locally
-        
+
+        localStorage.setItem('testBlocked', 'true');
+        setIsBlocked(true);
       }
     };
     document.addEventListener('visibilitychange', handleVisibilityChange);
     return () => document.removeEventListener('visibilitychange', handleVisibilityChange);
   }, [isLoggedIn, isLoading, showResults, isBlocked]);
 
-  // --- Per-Question Timer Logic ---
   useEffect(() => {
     if (timerRef.current) clearInterval(timerRef.current);
     if (!isLoggedIn || isLoading || showResults || isBlocked) return;
@@ -145,11 +160,12 @@ function App() {
   const handleSubmit = () => {
     if (showResults) return;
     clearInterval(timerRef.current);
+    const userid = localStorage.getItem("studentId");
     // Corrected the body to match the backend's Pydantic model
     fetch(`${API_URL}/api/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ answers: userAnswers }),
+      body: JSON.stringify({ userid: userid, answers: userAnswers }),
     })
       .then(res => res.json())
       .then(result => {
@@ -167,7 +183,7 @@ function App() {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
     }
   };
-  
+
   // --- Render Logic ---
   if (isBlocked) {
     return (
@@ -181,7 +197,7 @@ function App() {
       </div>
     );
   }
-  
+
   if (!isLoggedIn) {
     return (
       <div className="container">
@@ -204,6 +220,19 @@ function App() {
             onChange={(e) => setStudentId((e.target.value).toUpperCase())}
             disabled={isRegistering}
           />
+          <select className="input-field" value={department} onChange={e => setDepartment(e.target.value)} disabled={isRegistering}>
+            <option value="" disabled>Select your Department</option>
+            <option value="Bachelors of Computer Science">Bachelors of Computer Science</option>
+            <option value="Bachelors of Computer Application">Bachelors of Computer Application</option>
+          </select>
+          <select className="input-field" value={Test} onChange={e => setTest(e.target.value)} disabled={isRegistering}>
+            <option value="" disabled>Select your Test</option>
+            <option value="Prilims-1">Prilims-1</option>
+            <option value="Prilims-2">Prilims-2</option>
+            <option value="Prilims-3">Prilims-3</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
           <button onClick={handleLogin} className="next-btn" disabled={isRegistering}>
             {isRegistering ? 'Registering...' : 'Start Test'}
           </button>
@@ -213,7 +242,7 @@ function App() {
   }
 
   if (isLoading) return <div className="container"><h1>Loading Test...</h1></div>;
-  
+
   if (showResults) {
     return (
       <div className="container">
@@ -221,28 +250,28 @@ function App() {
           <h2>Test Complete! ✅</h2>
           <p className="score-text">Your Final Score: {score?.score} / {score?.total}</p>
           <button onClick={() => {
-              localStorage.clear();
-              window.location.reload();
+            localStorage.clear();
+            window.location.reload();
           }} className="restart-btn">Logout</button>
         </div>
       </div>
     );
   }
-  
+
   if (!questions.length) return <div className="container"><h1>Could not load questions.</h1></div>;
 
   const currentQuestion = questions[currentQuestionIndex];
-  
+
   return (
     <div className="container">
       <div className="timer">
         <svg className="timer-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
         <span>{questionTimeLeft}s</span>
       </div>
       <div className="quiz-header">
-        <img src={logo} alt="Bharat University Logo"/>
+        <img src={logo} alt="Bharat University Logo" />
         <h1>Aptitude Test</h1>
         <div className="progress-bar">
           <div className="progress-bar-inner" style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}></div>
@@ -255,7 +284,7 @@ function App() {
         </p>
         <div className="options-container">
           {currentQuestion.options.map((option) => (
-            <button key={option} className={`option-btn ${userAnswers[currentQuestion.id] === option ? 'selected' : ''}`} onClick={() => handleAnswerSelect(currentQuestion.id, option)}>
+            <button key={option} style={{ color: "black" }} className={`option-btn ${userAnswers[currentQuestion.id] === option ? 'selected' : ''}`} onClick={() => handleAnswerSelect(currentQuestion.id, option)}>
               {option}
             </button>
           ))}
