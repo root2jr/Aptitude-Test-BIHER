@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import logo from '/images/logo.png';
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://aptitude-test-biher.onrender.com";
 const QUESTION_TIME_LIMIT = 60;
 
 function App() {

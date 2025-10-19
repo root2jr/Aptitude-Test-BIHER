@@ -132,7 +132,6 @@ async def handle_student_details():
   response = await users.find({}).to_list(length=None)
   for res in response:
     res["_id"] = str(res["_id"])
-  print(response) 
   return {"message": response}
 
 class newAdd(BaseModel):
@@ -143,7 +142,6 @@ class newAdd(BaseModel):
 async def handle_add_questions(data:newAdd):
    new_questions = [q.dict() for q in data.Question]
    for que in new_questions:
-      print(que)
       response =  await questions.update_one(
     {"test": que["test"]},
     {"$addToSet": {"questions": que}},upsert=True
