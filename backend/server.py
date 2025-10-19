@@ -7,6 +7,8 @@ from pydantic import BaseModel
 import os
 from dotenv import load_dotenv
 from motor.motor_asyncio import AsyncIOMotorClient
+import uuid
+
 # --- 1. INITIALIZE FASTAPI APP ---
 app = FastAPI()
 load_dotenv()
@@ -41,16 +43,13 @@ class QuestionForClient(BaseModel):
     id: int
     question: str
     options: List[str]
-class AddNewQuestions(BaseModel):
-    question: str
-    options: List[str]
-    answer: str
-    test: str
+
 
 class UserAnswers(BaseModel):
     """The format for receiving answers from the client."""
     userid: str
     answers: Dict[int, str]
+    test: str
 
 class test(BaseModel):
    test: str
@@ -66,7 +65,6 @@ async def get_shuffled_questions(data:test):
     """
     # Create a deep copy to avoid modifying the original list in memory
     questions_db = (await questions.find_one({"test": data.test}))["questions"]
-    correct_answers_db = {q["id"]: q["answer"] for q in questions_db}
     questions_copy = [q.copy() for q in questions_db]
     
     # Shuffle the list of questions
@@ -86,7 +84,7 @@ async def submit_answers(user_answers: UserAnswers):
     """
     score = 0
     submitted = user_answers.answers
-    questions_db = (await questions.find_one({"test": "prelims-1"}))["questions"]
+    questions_db = (await questions.find_one({"test": user_answers.test}))["questions"]
     correct_answers_db = {q["id"]: q["answer"] for q in questions_db}
 
     # Iterate through the submitted answers and compare with the correct ones
@@ -134,14 +132,22 @@ async def handle_student_details():
     res["_id"] = str(res["_id"])
   return {"message": response}
 
+class AddNewQuestions(BaseModel):
+    question: str
+    options: List[str]
+    answer: str
+    test: str
+
 class newAdd(BaseModel):
   Question: List[AddNewQuestions]
   test: str
 
 @app.post("/api/add-questions")
 async def handle_add_questions(data:newAdd):
+   unique_id = str(uuid.uuid4())
    new_questions = [q.dict() for q in data.Question]
    for que in new_questions:
+      que["id"] = unique_id
       response =  await questions.update_one(
     {"test": que["test"]},
     {"$addToSet": {"questions": que}},upsert=True

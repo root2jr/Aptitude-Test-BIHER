@@ -161,11 +161,12 @@ function App() {
     if (showResults) return;
     clearInterval(timerRef.current);
     const userid = localStorage.getItem("studentId");
+    const test = localStorage.getItem("test");
     // Corrected the body to match the backend's Pydantic model
     fetch(`${API_URL}/api/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userid: userid, answers: userAnswers }),
+      body: JSON.stringify({ userid: userid, answers: userAnswers, test: test }),
     })
       .then(res => res.json())
       .then(result => {
