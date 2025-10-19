@@ -164,3 +164,11 @@ async def handle_fetch_questions():
   for res in response:
     res["_id"] = str(res["_id"])
   return response
+
+class userdelete(BaseModel):
+  reg: str
+  
+@app.post("/delete-user")
+async def handle_user_deletion(data:userdelete):
+  response = await users.delete_one({"userid": data.reg})
+  return {"message": "User Deleted Successfully"}
