@@ -76,26 +76,74 @@ async def get_shuffled_questions(data:test):
         
     return questions_copy
 
+import json
+import random
+from typing import List, Dict, Optional
+
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from motor.motor_asyncio import AsyncIOMotorClient # Assuming these are defined elsewhere
+# from dotenv import load_dotenv # Assuming these are defined elsewhere
+# Assuming 'app', 'users', 'questions' are initialized Motor collections
+
+# Assuming UserAnswers model is defined like this:
+class UserAnswers(BaseModel):
+    userid: str
+    answers: Dict[str, str] # Frontend sends question ID as string keys
+    test: str
+
 @app.post("/api/submit")
 async def submit_answers(user_answers: UserAnswers):
     """
-    This endpoint receives the user's answers, calculates the score securely
-    on the server, and returns the finl result.
+    Receives answers, calculates score, saves marks, 
+    and returns score, total, and detailed results for review.
     """
     score = 0
-    submitted = user_answers.answers
-    questions_db = (await questions.find_one({"test": user_answers.test}))["questions"]
-    correct_answers_db = {q["id"]: q["answer"] for q in questions_db}
+    detailed_results = []
+    submitted_answers = user_answers.answers
+
+    # Fetch the specific test questions from the database
+    test_data = await questions.find_one({"test": user_answers.test})
+    if not test_data or "questions" not in test_data:
+        raise HTTPException(status_code=404, detail=f"Test '{user_answers.test}' not found or has no questions.")
     
-    # Iterate through the submitted answers and compare with the correct ones
-    for question_id, user_answer in submitted.items():
-        # Check if the submitted answer for the given question ID is correct
-        if correct_answers_db.get(question_id) == user_answer:
+    questions_for_test = test_data["questions"]
+    correct_answers_db = {str(q["id"]): q for q in questions_for_test} # Use string ID keys
+
+    # Iterate through all questions of the test to build detailed results
+    for question_id_str, q_data in correct_answers_db.items():
+        user_answer = submitted_answers.get(question_id_str) # Get user's answer, defaults to None if not found
+        is_correct = (user_answer == q_data["answer"])
+
+        if is_correct:
             score += 1
-    response = await users.find_one_and_update({"userid":user_answers.userid},{"$set":{"marks": f"{score}/{len(questions_db)}"}})
+
+        detailed_results.append({
+            "id": q_data["id"],
+            "question": q_data["question"],
+            "userAnswer": user_answer, # Will be None if not answered
+            "correctAnswer": q_data["answer"],
+            "isCorrect": is_correct,
+        })
+
+    # Sort results by question ID for consistent order
+    detailed_results.sort(key=lambda x: x['id'])
+    
+    total_questions = len(questions_for_test)
+    marks_string = f"{score}/{total_questions}"
+
+    # Update the user's record with the marks string
+    await users.update_one(
+        {"userid": user_answers.userid, "test": user_answers.test}, # Match on userid and test
+        {"$set": {"marks": marks_string}},
+        upsert=False # Don't create if user not found, should exist from login
+    )
+
+    # Return score, total, and the detailed results
     return {
         "score": score,
-        "total": len(questions_db)
+        "total": total_questions,
+        "results": detailed_results # Add the detailed results array
     }
 
 @app.get("/")
