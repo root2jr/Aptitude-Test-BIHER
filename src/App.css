@@ -71,7 +71,6 @@ body {
   display: flex;
   flex-direction: column;
   height: auto;
-  max-height: calc(100vh - 2rem);
   position: relative;
   overflow: hidden;
   animation: fadeIn 0.5s ease-out;
@@ -98,12 +97,11 @@ body {
   text-align: center;
   width: 100%;
   flex-grow: 1;
-  padding: 1rem 0;
 }
 
 .login-container img {
   max-width: 180px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.3rem;
 }
 
 .login-container h1 {
@@ -115,7 +113,7 @@ body {
 .input-field {
   width: 100%;
   padding: 1.1rem 1.35rem;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.5rem;
   font-size: 1.05rem;
   font-family: inherit;
   border: 1px solid var(--border-color);
@@ -207,7 +205,7 @@ select.input-field {
 
 .progress-bar-inner {
   height: 100%;
-  background: var(--accent-gradient);
+  background: var(--accent-secondary);
   transition: width 0.4s ease-in-out;
 }
 
@@ -314,8 +312,8 @@ select.input-field {
   top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--warning-bg);
-  color: var(--warning-text);
+  background-color: var(--danger-color);
+  color: var(--warning-bg);
   padding: 1rem 1.5rem;
   border-radius: 0.75rem;
   border: 1px solid var(--warning-border);
@@ -510,12 +508,10 @@ select.input-field {
 
   .login-container img {
     max-width: 120px;
-    margin-bottom: 1.5rem;
   }
 
   .login-container h1 {
     font-size: 1.6rem;
-    margin-bottom: 2rem;
   }
 
   .input-field {

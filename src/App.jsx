@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 import logo from '/images/logo.png'; // Make sure this path is correct relative to public folder
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://aptitude-test-biher.onrender.com";
 const QUESTION_TIME_LIMIT = 60; // 60 seconds per question
 
 function App() {
@@ -13,7 +13,6 @@ function App() {
   const [department, setDepartment] = useState('');
   const [test, setTest] = useState('');
   const [isRegistering, setIsRegistering] = useState(false);
-
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState({});
@@ -24,6 +23,7 @@ function App() {
   const [isBlocked, setIsBlocked] = useState(false);
   const [questionTimeLeft, setQuestionTimeLeft] = useState(QUESTION_TIME_LIMIT);
   const [showWarning, setShowWarning] = useState(false);
+  const [returnLogin, setReturnLogin] = useState(false);
 
   const timerRef = useRef(null);
   const warningTimeoutRef = useRef(null);
@@ -59,11 +59,12 @@ function App() {
       alert("Please fill in all fields: Name, Student ID, Department, and Test.");
       return;
     }
-    if ((studentId.length < 9) || (studentId[0] !== 'U')) {
-      alert("Enter a valid Student ID (must start with 'U' and be at least 9 characters)");
+    if (studentId.length < 9 || (studentId[0] !== 'U' && studentId[0] !== 'P')) {
+      alert("Enter a valid Student ID (must start with 'U' or 'P' and be at least 9 characters)");
       return;
     }
 
+    
     setIsRegistering(true);
     try {
       const response = await fetch(`${API_URL}/users`, {
@@ -72,7 +73,7 @@ function App() {
         body: JSON.stringify({ name: studentName, userid: studentId, department: department, test: test, didCheat: "NO" }),
       });
       const responseData = await response.json();
-
+      localStorage.setItem("jwt", responseData?.token);
       if (responseData?.message === "User Already Attended the Test") {
         alert("A test has already been submitted with this Student ID.");
         setIsRegistering(false);
@@ -92,7 +93,6 @@ function App() {
       alert(`Could not start the test: ${error.message}.`);
       setIsRegistering(false);
     }
-    // Let the useEffect handle loading state after login
   };
 
   // --- Data Fetching ---
@@ -107,7 +107,7 @@ function App() {
       console.error("No test selected."); setIsLoading(false); return;
     }
     fetch(`${API_URL}/api/questions`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ test: selectedTest }),
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ test: selectedTest, jwt:localStorage.getItem("jwt") }),
     })
       .then(res => res.ok ? res.json() : res.json().then(err => { throw new Error(err.detail || 'Failed to fetch.') }))
       .then(data => { setQuestions(data); setIsLoading(false); })
@@ -128,14 +128,13 @@ function App() {
         localStorage.setItem('violationCount', newViolationCount.toString());
         if (newViolationCount === 1) {
           setShowWarning(true);
-          warningTimeoutRef.current = setTimeout(() => { setShowWarning(false); warningTimeoutRef.current = null; }, 5000);
+          warningTimeoutRef.current = setTimeout(() => { setShowWarning(false); warningTimeoutRef.current = null; }, 60000);
         } else if (newViolationCount >= 2) {
           const id = localStorage.getItem('studentId');
-          if (id) { fetch(`${API_URL}/cheat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userid: id }) }).catch(err => console.error("Cheat report failed:", err)); }
+          if (id) { fetch(`${API_URL}/cheat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userid: id, jwt: localStorage.getItem("jwt") }) }).catch(err => console.error("Cheat report failed:", err)); }
           localStorage.setItem('testBlocked', 'true');
           setIsBlocked(true);
           if (timerRef.current) clearInterval(timerRef.current);
-          setShowWarning(false);
         }
       }
     };
@@ -161,7 +160,6 @@ function App() {
     return () => clearInterval(timerRef.current);
   }, [currentQuestionIndex, isLoading, showResults, isBlocked, isLoggedIn]);
 
-  // --- Submit Handler (useCallback) ---
   const handleSubmit = useCallback(() => {
     if (showResults || isBlocked) return;
     console.log("Submitting final answers.");
@@ -171,13 +169,16 @@ function App() {
     fetch(`${API_URL}/api/submit`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userid: studentId, answers: userAnswers, test: test }),
+      body: JSON.stringify({ userid: studentId, answers: userAnswers, test: test, jwt: localStorage.getItem("jwt") }),
     })
       .then(res => res.ok ? res.json() : res.json().then(err => { throw new Error(err.detail || 'Submit failed.') }))
       .then(result => {
         setScore({ score: result.score, total: result.total });
         setDetailedResults(result.results || []); // <-- Store detailed results
         setShowResults(true);
+        setTimeout(() => {
+          setReturnLogin(true);
+        }, 60000);
       })
       .catch(error => {
         console.error("Failed to submit answers:", error);
@@ -240,7 +241,8 @@ function App() {
             <option value="" disabled>Select your Department</option>
             <option value="Bachelors of Computer Science">Bachelors of Computer Science</option>
             <option value="Bachelors of Computer Application">Bachelors of Computer Application</option>
-            {/* Add other departments */}
+            <option value="Masters of Computer Science">Masters of Computer Science</option>
+            <option value="Masters of Computer Application">Masters of Computer Application</option>
           </select>
           <select className="input-field" value={test} onChange={e => setTest(e.target.value)} disabled={isRegistering}>
             <option value="" disabled>Select your Test</option>
@@ -293,9 +295,9 @@ function App() {
           </div>
           {/* --- END ANSWER REVIEW SECTION --- */}
 
-          <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="restart-btn">
+        { returnLogin && <button onClick={() => { localStorage.clear(); window.location.reload(); }} className="restart-btn">
             Logout
-          </button>
+          </button> }
         </div>
       </div>
     );

@@ -1,0 +1,548 @@
+[{
+  "_id": {
+    "$oid": "68fb1d7b9cede0a6a50f0de3"
+  },
+  "name": "DHANA SRI M ",
+  "userid": "U200000002",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "23/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1dbd9cede0a6a50f0de5"
+  },
+  "name": "SANTHOSH T",
+  "userid": "U20000003",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "30/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1dc09cede0a6a50f0de6"
+  },
+  "name": "Mohammad Ali Jinna S",
+  "userid": "U20000005",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "40/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1dcc9cede0a6a50f0de7"
+  },
+  "name": "Poojakavi.M",
+  "userid": "U2400000009",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "30/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1dd79cede0a6a50f0de8"
+  },
+  "name": "r.matheswar ",
+  "userid": "U200000006",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "28/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1de09cede0a6a50f0de9"
+  },
+  "name": "RITHIKA V",
+  "userid": "U2400000008",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "22/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1de49cede0a6a50f0dea"
+  },
+  "name": "Priyanka P",
+  "userid": "U200000001",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "24/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1e2a9cede0a6a50f0deb"
+  },
+  "name": "Udhaya Kumar.M",
+  "userid": "U200000007",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "28/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1e2d9cede0a6a50f0dec"
+  },
+  "name": "Karthikeyan.B",
+  "userid": "U200000008",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "33/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1e2f9cede0a6a50f0ded"
+  },
+  "name": "R Jayantha Kumar",
+  "userid": "U2400000056",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "31/100"
+},
+{
+  "_id": {
+    "$oid": "68fb1e349cede0a6a50f0dee"
+  },
+  "name": "Kishore M",
+  "userid": "U2400000077",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "37/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21669cede0a6a50f0df1"
+  },
+  "name": "Erfan haseena ",
+  "userid": "U1800008762",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "25/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21739cede0a6a50f0df2"
+  },
+  "name": "Kavipriya ",
+  "userid": "U1800008832",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "33/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21739cede0a6a50f0df3"
+  },
+  "name": "Praveen Kumar.D",
+  "userid": "U1800008898",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "78/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21799cede0a6a50f0df4"
+  },
+  "name": "Chinthakaya muneendra ",
+  "userid": "U1800008512",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb217d9cede0a6a50f0df5"
+  },
+  "name": "Ajay Kumar.S",
+  "userid": "U1800008889",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb21819cede0a6a50f0df6"
+  },
+  "name": "Vignesh S ",
+  "userid": "U1800008721",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "40/100"
+},
+{
+  "_id": {
+    "$oid": "68fb218b9cede0a6a50f0df7"
+  },
+  "name": "Deepalakshmi k",
+  "userid": "U1800007958",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "44/100"
+},
+{
+  "_id": {
+    "$oid": "68fb218b9cede0a6a50f0df8"
+  },
+  "name": "Manchala Madhu Priya",
+  "userid": "U1800008661",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "51/100"
+},
+{
+  "_id": {
+    "$oid": "68fb218c9cede0a6a50f0df9"
+  },
+  "name": "THILAK RU",
+  "userid": "U1800008634",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb218d9cede0a6a50f0dfa"
+  },
+  "name": "Mohannath S",
+  "userid": "U1800008292",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "75/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21969cede0a6a50f0dfb"
+  },
+  "name": "Muthupandi R",
+  "userid": "U1800008491",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "69/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21ad9cede0a6a50f0dfc"
+  },
+  "name": "Santhoshkumar",
+  "userid": "U1800008382",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "58/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21b39cede0a6a50f0dfd"
+  },
+  "name": "SELVAVINAYAGAM S",
+  "userid": "U1800008896",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "41/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21b89cede0a6a50f0dfe"
+  },
+  "name": "DINESH KUMAR K",
+  "userid": "U1800008774",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "46/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21c09cede0a6a50f0dff"
+  },
+  "name": "Athishh V",
+  "userid": "U1800008275",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb21c39cede0a6a50f0e00"
+  },
+  "name": "Yogithsaran S",
+  "userid": "U1800008882",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb21c59cede0a6a50f0e01"
+  },
+  "name": "Divya V ",
+  "userid": "U1800008768",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "35/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21c79cede0a6a50f0e02"
+  },
+  "name": "Meena R",
+  "userid": "U1800008769",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "40/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21ca9cede0a6a50f0e03"
+  },
+  "name": "SRIDHARAN.T",
+  "userid": "U1800008685",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb21cf9cede0a6a50f0e04"
+  },
+  "name": "Bowiya G ",
+  "userid": "U1800008518",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "41/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21dc9cede0a6a50f0e05"
+  },
+  "name": "Rajkumar k",
+  "userid": "U1800008883",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "28/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21e29cede0a6a50f0e06"
+  },
+  "name": "RAGHUL P ",
+  "userid": "U1800008493",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "89/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21e49cede0a6a50f0e07"
+  },
+  "name": "Bhuvaneshkumar S ",
+  "userid": "U1800008880",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "41/100"
+},
+{
+  "_id": {
+    "$oid": "68fb21e79cede0a6a50f0e08"
+  },
+  "name": "Abinaya. A",
+  "userid": "U1800008462",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb21ea9cede0a6a50f0e09"
+  },
+  "name": "GOPI.R",
+  "userid": "U1800008458",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "30/100"
+},
+{
+  "_id": {
+    "$oid": "68fb22259cede0a6a50f0e0a"
+  },
+  "name": "Praveen Kuma",
+  "userid": "U1800008545",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb222a9cede0a6a50f0e0b"
+  },
+  "name": "Crisba Mini",
+  "userid": "U1800008378",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "57/100"
+},
+{
+  "_id": {
+    "$oid": "68fb224a9cede0a6a50f0e0c"
+  },
+  "name": "JEEVA P ",
+  "userid": "U1800008822",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "88/100"
+},
+{
+  "_id": {
+    "$oid": "68fb22799cede0a6a50f0e0d"
+  },
+  "name": "KOLLI Purnamanikanta ",
+  "userid": "U180000REGNO",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb22be9cede0a6a50f0e0e"
+  },
+  "name": "Mark",
+  "userid": "U57676748",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "29/100"
+},
+{
+  "_id": {
+    "$oid": "68fb24059cede0a6a50f0e10"
+  },
+  "name": "Lokeswaran J",
+  "userid": "U200000004",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb24629cede0a6a50f0e11"
+  },
+  "name": "Mark",
+  "userid": "U675889574",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "29/100"
+},
+{
+  "_id": {
+    "$oid": "68fb25389cede0a6a50f0e13"
+  },
+  "name": "Sathish M ",
+  "userid": "U2400000097",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "34/100"
+},
+{
+  "_id": {
+    "$oid": "68fb27d29cede0a6a50f0e14"
+  },
+  "name": "B KABILESH",
+  "userid": "U1800008460",
+  "didCheat": "YES",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb28869cede0a6a50f0e15"
+  },
+  "name": "Sivakumar M",
+  "userid": "U1800008190",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "89/100"
+},
+{
+  "_id": {
+    "$oid": "68fb2cfe9cede0a6a50f0e16"
+  },
+  "name": "Matheswar ",
+  "userid": "U210000006",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1"
+},
+{
+  "_id": {
+    "$oid": "68fb34289cede0a6a50f0e17"
+  },
+  "name": "Nithishkumar A S ",
+  "userid": "U180000REGNO8851",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Application",
+  "test": "Prilims-1",
+  "marks": "25/100"
+},
+{
+  "_id": {
+    "$oid": "68fb47cf9cede0a6a50f0e18"
+  },
+  "name": "Karthikeyan A",
+  "userid": "U22SCO044",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Hard"
+},
+{
+  "_id": {
+    "$oid": "68fb550e9cede0a6a50f0e19"
+  },
+  "name": "Udhaya Kumar.M",
+  "userid": "U20000007",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "29/100"
+},
+{
+  "_id": {
+    "$oid": "68fb8d059cede0a6a50f0e1a"
+  },
+  "name": "KAVITHA J",
+  "userid": "U1800008614",
+  "didCheat": "NO",
+  "department": "Bachelors of Computer Science",
+  "test": "Prilims-1",
+  "marks": "76/100"
+}]

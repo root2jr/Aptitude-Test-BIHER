@@ -1,0 +1,1107 @@
+[
+  {
+    "test": "Prilims-2",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is the next number in the series: 1, 3, 6, 10, 15, ?",
+        "options": [
+          "20",
+          "21",
+          "22",
+          "24"
+        ],
+        "answer": "21"
+      },
+      {
+        "id": 2,
+        "question": "If 'BOOK' is coded as '2151511', how is 'PEN' coded?",
+        "options": [
+          "16514",
+          "15513",
+          "16414",
+          "17514"
+        ],
+        "answer": "16514"
+      },
+      {
+        "id": 3,
+        "question": "A car travels 80 km in 2 hours. How long will it take to travel 200 km at the same speed?",
+        "options": [
+          "4 hours",
+          "4.5 hours",
+          "5 hours",
+          "6 hours"
+        ],
+        "answer": "5 hours"
+      },
+      {
+        "id": 4,
+        "question": "Choose the word that means the opposite of 'ANCIENT'.",
+        "options": [
+          "Old",
+          "Historic",
+          "Modern",
+          "Past"
+        ],
+        "answer": "Modern"
+      },
+      {
+        "id": 5,
+        "question": "What is the area of a rectangle with length 12m and width 5m?",
+        "options": [
+          "17 sq.m",
+          "34 sq.m",
+          "60 sq.m",
+          "50 sq.m"
+        ],
+        "answer": "60 sq.m"
+      },
+      {
+        "id": 6,
+        "question": "Find the odd one out: January, May, July, November.",
+        "options": [
+          "January",
+          "May",
+          "July",
+          "November"
+        ],
+        "answer": "November"
+      },
+      {
+        "id": 7,
+        "question": "What is 25% of 80?",
+        "options": [
+          "10",
+          "15",
+          "20",
+          "25"
+        ],
+        "answer": "20"
+      },
+      {
+        "id": 8,
+        "question": "Complete the analogy: Bird is to Fly as Fish is to ______.",
+        "options": [
+          "Walk",
+          "Swim",
+          "Crawl",
+          "Jump"
+        ],
+        "answer": "Swim"
+      },
+      {
+        "id": 9,
+        "question": "A recipe needs 3 eggs for 6 muffins. How many eggs are needed for 18 muffins?",
+        "options": [
+          "6",
+          "8",
+          "9",
+          "12"
+        ],
+        "answer": "9"
+      },
+      {
+        "id": 10,
+        "question": "What comes next in the sequence: Z, A, Y, B, X, C, ?",
+        "options": [
+          "W",
+          "D",
+          "V",
+          "E"
+        ],
+        "answer": "W"
+      },
+      {
+        "id": 11,
+        "question": "If you buy a pen for $0.75 and pay with a $1 bill, how much change do you get?",
+        "options": [
+          "$0.15",
+          "$0.20",
+          "$0.25",
+          "$0.35"
+        ],
+        "answer": "$0.25"
+      },
+      {
+        "id": 12,
+        "question": "What is the sum of the first 5 positive integers (1+2+3+4+5)?",
+        "options": [
+          "10",
+          "12",
+          "15",
+          "20"
+        ],
+        "answer": "15"
+      },
+      {
+        "id": 13,
+        "question": "Which word is misspelled?",
+        "options": [
+          "Believe",
+          "Receive",
+          "Achieve",
+          "Concieve"
+        ],
+        "answer": "Concieve"
+      },
+      {
+        "id": 14,
+        "question": "A train leaves at 9:00 AM and arrives at 1:30 PM. How long was the journey?",
+        "options": [
+          "3 hours 30 mins",
+          "4 hours",
+          "4 hours 30 mins",
+          "5 hours"
+        ],
+        "answer": "4 hours 30 mins"
+      },
+      {
+        "id": 15,
+        "question": "What is the next number: 1, 8, 27, 64, ...?",
+        "options": [
+          "100",
+          "121",
+          "125",
+          "216"
+        ],
+        "answer": "125"
+      },
+      {
+        "id": 16,
+        "question": "Choose the synonym for 'SMALL'.",
+        "options": [
+          "Large",
+          "Big",
+          "Huge",
+          "Tiny"
+        ],
+        "answer": "Tiny"
+      },
+      {
+        "id": 17,
+        "question": "How many sides does a hexagon have?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": "6"
+      },
+      {
+        "id": 18,
+        "question": "If 'COLD' is coded as 'DPME', how is 'HEAT' coded?",
+        "options": [
+          "IFBU",
+          "IFBV",
+          "JFCV",
+          "IEBU"
+        ],
+        "answer": "IFBU"
+      },
+      {
+        "id": 19,
+        "question": "Calculate the average of 5, 10, 15, and 20.",
+        "options": [
+          "10",
+          "12",
+          "12.5",
+          "15"
+        ],
+        "answer": "12.5"
+      },
+      {
+        "id": 20,
+        "question": "What is the missing number: 144, 121, 100, 81, __, 49?",
+        "options": [
+          "64",
+          "72",
+          "60",
+          "56"
+        ],
+        "answer": "64"
+      },
+      {
+        "id": 21,
+        "question": "A pizza is cut into 8 equal slices. If you eat 3 slices, what fraction is left?",
+        "options": [
+          "3/8",
+          "5/8",
+          "1/2",
+          "3/5"
+        ],
+        "answer": "5/8"
+      },
+      {
+        "id": 22,
+        "question": "Which planet is known as the Red Planet?",
+        "options": [
+          "Venus",
+          "Mars",
+          "Jupiter",
+          "Saturn"
+        ],
+        "answer": "Mars"
+      },
+      {
+        "id": 23,
+        "question": "If 6 cans of juice cost $9.00, what is the cost of one can?",
+        "options": [
+          "$1.00",
+          "$1.25",
+          "$1.50",
+          "$1.75"
+        ],
+        "answer": "$1.50"
+      },
+      {
+        "id": 24,
+        "question": "Find the next letters: AB, DE, GH, JK, ...?",
+        "options": [
+          "LM",
+          "LN",
+          "MN",
+          "MO"
+        ],
+        "answer": "MN"
+      },
+      {
+        "id": 25,
+        "question": "What is 7 multiplied by 12?",
+        "options": [
+          "74",
+          "84",
+          "91",
+          "88"
+        ],
+        "answer": "84"
+      },
+      {
+        "id": 26,
+        "question": "Choose the word that means the opposite of 'WET'.",
+        "options": [
+          "Moist",
+          "Damp",
+          "Soaked",
+          "Dry"
+        ],
+        "answer": "Dry"
+      },
+      {
+        "id": 27,
+        "question": "A square garden has a perimeter of 40 meters. What is the length of one side?",
+        "options": [
+          "5m",
+          "8m",
+          "10m",
+          "20m"
+        ],
+        "answer": "10m"
+      },
+      {
+        "id": 28,
+        "question": "What number is missing: 3, 9, 27, __, 243?",
+        "options": [
+          "54",
+          "81",
+          "108",
+          "72"
+        ],
+        "answer": "81"
+      },
+      {
+        "id": 29,
+        "question": "If 'READ' is coded 18-5-1-4, how is 'SEND' coded?",
+        "options": [
+          "19-5-14-4",
+          "18-5-13-4",
+          "19-4-14-5",
+          "19-5-13-4"
+        ],
+        "answer": "19-5-14-4"
+      },
+      {
+        "id": 30,
+        "question": "A bus ticket costs $2.50. How much do 4 tickets cost?",
+        "options": [
+          "$8.00",
+          "$9.00",
+          "$10.00",
+          "$12.50"
+        ],
+        "answer": "$10.00"
+      },
+      {
+        "id": 31,
+        "question": "Which of these is a mammal?",
+        "options": [
+          "Shark",
+          "Lizard",
+          "Eagle",
+          "Whale"
+        ],
+        "answer": "Whale"
+      },
+      {
+        "id": 32,
+        "question": "What is the next number: 50, 45, 40, 35, ...?",
+        "options": [
+          "25",
+          "30",
+          "20",
+          "34"
+        ],
+        "answer": "30"
+      },
+      {
+        "id": 33,
+        "question": "If you sleep for 8 hours every night, what percentage of the day do you spend sleeping?",
+        "options": [
+          "25%",
+          "30%",
+          "33.3%",
+          "40%"
+        ],
+        "answer": "33.3%"
+      },
+      {
+        "id": 34,
+        "question": "Complete the analogy: Ice is to Cold as Fire is to ______.",
+        "options": [
+          "Water",
+          "Smoke",
+          "Hot",
+          "Wood"
+        ],
+        "answer": "Hot"
+      },
+      {
+        "id": 35,
+        "question": "What is the value of 100 - (5 x 10)?",
+        "options": [
+          "950",
+          "90",
+          "50",
+          "500"
+        ],
+        "answer": "50"
+      },
+      {
+        "id": 36,
+        "question": "Find the odd one out: Run, Walk, Swim, Sit.",
+        "options": [
+          "Run",
+          "Walk",
+          "Swim",
+          "Sit"
+        ],
+        "answer": "Sit"
+      },
+      {
+        "id": 37,
+        "question": "How many degrees are in a straight angle?",
+        "options": [
+          "45",
+          "90",
+          "180",
+          "360"
+        ],
+        "answer": "180"
+      },
+      {
+        "id": 38,
+        "question": "A farmer has 15 cows and 23 sheep. How many animals does he have in total?",
+        "options": [
+          "35",
+          "38",
+          "48",
+          "8"
+        ],
+        "answer": "38"
+      },
+      {
+        "id": 39,
+        "question": "What is the next letter: O, T, T, F, F, S, S, ...?",
+        "options": [
+          "E",
+          "N",
+          "T",
+          "O"
+        ],
+        "answer": "E"
+      },
+      {
+        "id": 40,
+        "question": "If 'BANK' is written 'Knab', how is 'WORD' written?",
+        "options": [
+          "Drow",
+          "Drol",
+          "Doow",
+          "Dorw"
+        ],
+        "answer": "Drow"
+      },
+      {
+        "id": 41,
+        "question": "What is the largest two-digit number?",
+        "options": [
+          "90",
+          "98",
+          "99",
+          "100"
+        ],
+        "answer": "99"
+      },
+      {
+        "id": 42,
+        "question": "A plant grows 2 cm every day. If it is 10 cm tall today, how tall will it be in 5 days?",
+        "options": [
+          "15 cm",
+          "18 cm",
+          "20 cm",
+          "22 cm"
+        ],
+        "answer": "20 cm"
+      },
+      {
+        "id": 43,
+        "question": "Choose the synonym for 'QUICK'.",
+        "options": [
+          "Slow",
+          "Lazy",
+          "Rapid",
+          "Calm"
+        ],
+        "answer": "Rapid"
+      },
+      {
+        "id": 44,
+        "question": "Find the missing number: 10, 11, 13, 16, 20, ?",
+        "options": [
+          "24",
+          "25",
+          "26",
+          "27"
+        ],
+        "answer": "25"
+      },
+      {
+        "id": 45,
+        "question": "Which direction is opposite to North-East?",
+        "options": [
+          "South-West",
+          "North-West",
+          "South-East",
+          "West"
+        ],
+        "answer": "South-West"
+      },
+      {
+        "id": 46,
+        "question": "What is 1/2 + 1/4?",
+        "options": [
+          "1/6",
+          "2/6",
+          "3/4",
+          "1/8"
+        ],
+        "answer": "3/4"
+      },
+      {
+        "id": 47,
+        "question": "If you save $5 every week, how much will you save in a year (52 weeks)?",
+        "options": [
+          "$200",
+          "$250",
+          "$260",
+          "$300"
+        ],
+        "answer": "$260"
+      },
+      {
+        "id": 48,
+        "question": "Complete the analogy: Glove is to Hand as Sock is to ______.",
+        "options": [
+          "Shoe",
+          "Foot",
+          "Leg",
+          "Ankle"
+        ],
+        "answer": "Foot"
+      },
+      {
+        "id": 49,
+        "question": "What is the product of all numbers on a standard telephone keypad (0-9)?",
+        "options": [
+          "362880",
+          "40320",
+          "0",
+          "Cannot be determined"
+        ],
+        "answer": "0"
+      },
+      {
+        "id": 50,
+        "question": "A meeting lasted 75 minutes. How many hours and minutes is that?",
+        "options": [
+          "1 hour 15 mins",
+          "1 hour 25 mins",
+          "1 hour 5 mins",
+          "1 hour 30 mins"
+        ],
+        "answer": "1 hour 15 mins"
+      },
+      {
+        "id": 51,
+        "question": "Find the next term: 3, 5, 8, 13, 21, ...?",
+        "options": [
+          "30",
+          "32",
+          "34",
+          "36"
+        ],
+        "answer": "34"
+      },
+      {
+        "id": 52,
+        "question": "If 'SMART' is coded as 'TLBSU', how is 'BRAVE' coded?",
+        "options": [
+          "CSBWF",
+          "CSBWE",
+          "DSBWF",
+          "CSBWG"
+        ],
+        "answer": "CSBWF"
+      },
+      {
+        "id": 53,
+        "question": "What is 10% of $500?",
+        "options": [
+          "$10",
+          "$25",
+          "$50",
+          "$100"
+        ],
+        "answer": "$50"
+      },
+      {
+        "id": 54,
+        "question": "Which of these numbers is divisible by 3?",
+        "options": [
+          "124",
+          "137",
+          "141",
+          "152"
+        ],
+        "answer": "141"
+      },
+      {
+        "id": 55,
+        "question": "A class has 15 boys and 20 girls. What is the ratio of boys to girls?",
+        "options": [
+          "3:4",
+          "4:3",
+          "3:5",
+          "2:3"
+        ],
+        "answer": "3:4"
+      },
+      {
+        "id": 56,
+        "question": "Find the missing letter: C, F, I, L, O, ...?",
+        "options": [
+          "P",
+          "Q",
+          "R",
+          "S"
+        ],
+        "answer": "R"
+      },
+      {
+        "id": 57,
+        "question": "What is the volume of a cube with side length 3 cm?",
+        "options": [
+          "9 cubic cm",
+          "18 cubic cm",
+          "27 cubic cm",
+          "30 cubic cm"
+        ],
+        "answer": "27 cubic cm"
+      },
+      {
+        "id": 58,
+        "question": "Choose the word that means the same as 'DIFFICULT'.",
+        "options": [
+          "Easy",
+          "Simple",
+          "Hard",
+          "Clear"
+        ],
+        "answer": "Hard"
+      },
+      {
+        "id": 59,
+        "question": "A bicycle costs $150. If sales tax is 10%, what is the total cost?",
+        "options": [
+          "$155",
+          "$160",
+          "$165",
+          "$175"
+        ],
+        "answer": "$165"
+      },
+      {
+        "id": 60,
+        "question": "What comes next: Spring, Summer, Autumn, ...?",
+        "options": [
+          "Winter",
+          "Fall",
+          "Season",
+          "Year"
+        ],
+        "answer": "Winter"
+      },
+      {
+        "id": 61,
+        "question": "If 8 oranges cost $4.00, how much do 12 oranges cost?",
+        "options": [
+          "$5.00",
+          "$5.50",
+          "$6.00",
+          "$6.50"
+        ],
+        "answer": "$6.00"
+      },
+      {
+        "id": 62,
+        "question": "Find the next number in the series: 1, 2, 4, 7, 11, 16, ...?",
+        "options": [
+          "20",
+          "21",
+          "22",
+          "23"
+        ],
+        "answer": "22"
+      },
+      {
+        "id": 63,
+        "question": "What is the main function of the heart?",
+        "options": [
+          "Digestion",
+          "Breathing",
+          "Pumping blood",
+          "Thinking"
+        ],
+        "answer": "Pumping blood"
+      },
+      {
+        "id": 64,
+        "question": "If 'LATE' is coded 12-1-20-5, how is 'MASK' coded?",
+        "options": [
+          "13-1-19-11",
+          "12-1-19-11",
+          "13-1-18-11",
+          "13-1-19-12"
+        ],
+        "answer": "13-1-19-11"
+      },
+      {
+        "id": 65,
+        "question": "What is the value of 0.5 multiplied by 0.5?",
+        "options": [
+          "2.5",
+          "0.25",
+          "0.05",
+          "1.0"
+        ],
+        "answer": "0.25"
+      },
+      {
+        "id": 66,
+        "question": "A rectangle's length is twice its width. If the width is 4 cm, what is the area?",
+        "options": [
+          "16 sq.cm",
+          "24 sq.cm",
+          "32 sq.cm",
+          "12 sq.cm"
+        ],
+        "answer": "32 sq.cm"
+      },
+      {
+        "id": 67,
+        "question": "Which number is the largest?",
+        "options": [
+          "0.9",
+          "0.99",
+          "0.099",
+          "0.909"
+        ],
+        "answer": "0.99"
+      },
+      {
+        "id": 68,
+        "question": "Complete the analogy: Writer is to Pen as Painter is to ______.",
+        "options": [
+          "Canvas",
+          "Color",
+          "Brush",
+          "Easel"
+        ],
+        "answer": "Brush"
+      },
+      {
+        "id": 69,
+        "question": "How many minutes are in 3 and a half hours?",
+        "options": [
+          "180",
+          "195",
+          "200",
+          "210"
+        ],
+        "answer": "210"
+      },
+      {
+        "id": 70,
+        "question": "Find the odd one out: Piano, Guitar, Violin, Flute.",
+        "options": [
+          "Piano",
+          "Guitar",
+          "Violin",
+          "Flute"
+        ],
+        "answer": "Flute"
+      },
+      {
+        "id": 71,
+        "question": "If 'XYZ' is represented as 'ABC', how is 'EFG' represented?",
+        "options": [
+          "HIJ",
+          "TUV",
+          "UVW",
+          "BCD"
+        ],
+        "answer": "UVW"
+      },
+      {
+        "id": 72,
+        "question": "A recipe calls for 250 grams of sugar. How many kilograms is this?",
+        "options": [
+          "2.5 kg",
+          "0.25 kg",
+          "25 kg",
+          "0.025 kg"
+        ],
+        "answer": "0.25 kg"
+      },
+      {
+        "id": 73,
+        "question": "What number comes next: 1, 1, 2, 4, 3, 9, 4, 16, 5, ...?",
+        "options": [
+          "6",
+          "20",
+          "25",
+          "30"
+        ],
+        "answer": "25"
+      },
+      {
+        "id": 74,
+        "question": "Which of these cities is located in Australia?",
+        "options": [
+          "Vienna",
+          "Cairo",
+          "Sydney",
+          "Toronto"
+        ],
+        "answer": "Sydney"
+      },
+      {
+        "id": 75,
+        "question": "What is the value of 10 + 2 * (6 - 3)?",
+        "options": [
+          "36",
+          "16",
+          "24",
+          "13"
+        ],
+        "answer": "16"
+      },
+      {
+        "id": 76,
+        "question": "Choose the word that means the opposite of 'PUBLIC'.",
+        "options": [
+          "Open",
+          "Common",
+          "Private",
+          "Known"
+        ],
+        "answer": "Private"
+      },
+      {
+        "id": 77,
+        "question": "A circle has a diameter of 10 cm. What is its radius?",
+        "options": [
+          "5 cm",
+          "10 cm",
+          "20 cm",
+          "2.5 cm"
+        ],
+        "answer": "5 cm"
+      },
+      {
+        "id": 78,
+        "question": "If 5 workers take 8 hours to complete a task, how long would 4 workers take?",
+        "options": [
+          "6 hours",
+          "7 hours",
+          "10 hours",
+          "12 hours"
+        ],
+        "answer": "10 hours"
+      },
+      {
+        "id": 79,
+        "question": "Find the next pattern: O, OO, OOO, ...?",
+        "options": [
+          "OOOO",
+          "OOOOO",
+          "O",
+          "OO"
+        ],
+        "answer": "OOOO"
+      },
+      {
+        "id": 80,
+        "question": "What is the freezing point of water in Fahrenheit?",
+        "options": [
+          "0°F",
+          "32°F",
+          "100°F",
+          "-32°F"
+        ],
+        "answer": "32°F"
+      },
+      {
+        "id": 81,
+        "question": "If 'APPLE' = 5, 'ORANGE' = 6, what does 'BANANA' equal?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "3"
+        ],
+        "answer": "6"
+      },
+      {
+        "id": 82,
+        "question": "A bag contains 5 red marbles and 5 blue marbles. What is the minimum number you must pick to guarantee getting at least one red marble?",
+        "options": [
+          "1",
+          "2",
+          "5",
+          "6"
+        ],
+        "answer": "6"
+      },
+      {
+        "id": 83,
+        "question": "What is the value of 2 to the power of 5 (2^5)?",
+        "options": [
+          "10",
+          "16",
+          "25",
+          "32"
+        ],
+        "answer": "32"
+      },
+      {
+        "id": 84,
+        "question": "Which number is missing: 4, 8, 12, __, 20, 24?",
+        "options": [
+          "14",
+          "15",
+          "16",
+          "18"
+        ],
+        "answer": "16"
+      },
+      {
+        "id": 85,
+        "question": "Complete the analogy: Seed is to Plant as Egg is to ______.",
+        "options": [
+          "Nest",
+          "Bird",
+          "Shell",
+          "Yolk"
+        ],
+        "answer": "Bird"
+      },
+      {
+        "id": 86,
+        "question": "If 'NOW' is coded 'MNT', how is 'TAP' coded?",
+        "options": [
+          "SBO",
+          "SZO",
+          "SZO",
+          "SAO"
+        ],
+        "answer": "SZO"
+      },
+      {
+        "id": 87,
+        "question": "What is the sum of 1.5 and 2.25?",
+        "options": [
+          "3.25",
+          "3.50",
+          "3.75",
+          "4.00"
+        ],
+        "answer": "3.75"
+      },
+      {
+        "id": 88,
+        "question": "A movie ticket costs $8. How many tickets can you buy with $50?",
+        "options": [
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "answer": "6"
+      },
+      {
+        "id": 89,
+        "question": "Find the next pair: (A, Z), (B, Y), (C, X), (?, ?)",
+        "options": [
+          "(D, W)",
+          "(E, V)",
+          "(D, V)",
+          "(E, W)"
+        ],
+        "answer": "(D, W)"
+      },
+      {
+        "id": 90,
+        "question": "What is the smallest prime number?",
+        "options": [
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "answer": "2"
+      },
+      {
+        "id": 91,
+        "question": "A library has 5 shelves, and each shelf holds 30 books. How many books are there in total?",
+        "options": [
+          "100",
+          "120",
+          "150",
+          "180"
+        ],
+        "answer": "150"
+      },
+      {
+        "id": 92,
+        "question": "What is the value of 10% of 10% of 1000?",
+        "options": [
+          "1",
+          "10",
+          "100",
+          "0.1"
+        ],
+        "answer": "10"
+      },
+      {
+        "id": 93,
+        "question": "Find the odd one out: Dog, Cat, Lion, Hamster.",
+        "options": [
+          "Dog",
+          "Cat",
+          "Lion",
+          "Hamster"
+        ],
+        "answer": "Lion"
+      },
+      {
+        "id": 94,
+        "question": "If yesterday was Tuesday, what day is tomorrow?",
+        "options": [
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Monday"
+        ],
+        "answer": "Thursday"
+      },
+      {
+        "id": 95,
+        "question": "A farmer sells 3/5 of his apples. If he started with 50 apples, how many did he sell?",
+        "options": [
+          "10",
+          "20",
+          "30",
+          "40"
+        ],
+        "answer": "30"
+      },
+      {
+        "id": 96,
+        "question": "What number continues the sequence: 9, 12, 16, 21, 27, ...?",
+        "options": [
+          "32",
+          "33",
+          "34",
+          "35"
+        ],
+        "answer": "34"
+      },
+      {
+        "id": 97,
+        "question": "If 'BIG' is 2-9-7, what is 'FAT'?",
+        "options": [
+          "6-1-20",
+          "5-1-19",
+          "6-2-20",
+          "6-1-19"
+        ],
+        "answer": "6-1-20"
+      },
+      {
+        "id": 98,
+        "question": "A car uses 1 liter of fuel for every 15 km. How many liters are needed for a 120 km trip?",
+        "options": [
+          "6 liters",
+          "7 liters",
+          "8 liters",
+          "9 liters"
+        ],
+        "answer": "8 liters"
+      },
+      {
+        "id": 99,
+        "question": "Which is the correct plural form of 'mouse'?",
+        "options": [
+          "Mouses",
+          "Mice",
+          "Mouse",
+          "Meese"
+        ],
+        "answer": "Mice"
+      },
+      {
+        "id": 100,
+        "question": "What is the value of 5! (5 factorial = 5x4x3x2x1)?",
+        "options": [
+          "15",
+          "60",
+          "100",
+          "120"
+        ],
+        "answer": "120"
+      }
+    ]
+  }
+]
