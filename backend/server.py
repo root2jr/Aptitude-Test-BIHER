@@ -245,7 +245,7 @@ async def handle_add_questions(data: newAdd):
     # Fetch the test document once
     test_doc = await questions.find_one({"test": data.test})
     if not test_doc:
-        insert_new = await questions.insert_one({"test": data.test, "questions":data.Question })
+        insert_new = await questions.insert_one({"test": data.test, "questions":new_questions })
         return {"message": "New Test Created"}
 
     # Get current count of existing questions
